@@ -17,27 +17,25 @@
                             </li>-->
 						
                             <li class="has_sub">
-                                <a href="#" class="waves-effect"><i class="ti-settings"></i> <span> Catalogos</span> </a>
+                                <a href="#" class="waves-effect"><i class="ti-settings"></i> <span>Catalogos</span> </a>
                                 <ul class="list-unstyled">
                                     <li><a href="clientes.php">Clientes</a></li>
-                                    <li><a href="coord.php">Coordinadores</a></li>
-                                    <li><a href="eventos.php">Eventos</a></li>
                                 </ul>
                             </li>
 
-                            <li class="has_sub">
+                           <!-- <li class="has_sub">
                                 <a href="#" class="waves-effect"><i class="ti-money"></i><span class="label label-primary pull-right">6</span><span> Pagos </span> </a>
                                 <ul class="list-unstyled">
                                     <li><a href="pagos.php">Revisar Pagos</a></li>
                                 </ul>
-                            </li>
+                            </li>-->
 
-                            <li class="has_sub">
+                            <!--<li class="has_sub">
                                 <a href="#" class="waves-effect"><i class=" ti-bookmark-alt "></i> <span> Finanzas </span> </a>
                                 <ul class="list-unstyled">
                                 	<li><a href="finanzas.php">Programación</a></li>
                                 </ul>
-                            </li>
+                            </li>-->
 <!--
                             <li class="has_sub">
                                 <a href="#" class="waves-effect"><i class="ti-pencil-alt"></i><span> Forms </span></a>

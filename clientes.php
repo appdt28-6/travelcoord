@@ -1,3 +1,4 @@
+<?php $coord=$_GET['coord']; ?>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -52,7 +53,7 @@
 								<h4 class="page-title">Listado de Clientes</h4>
 								<ol class="breadcrumb">
 									<li>
-										<a href="excel/clientes.php">Exportar a Excel</a>
+										<a href="excel/clientes.php?coord=<?php echo $coord;?>">Exportar a Excel</a>
 									</li>
 								</ol>
 							</div>
@@ -81,7 +82,7 @@
                                             <tbody>
                                             <?php
 											include('connect.php');
-											$query="SELECT * FROM Clientes";
+											$query="SELECT * FROM Clientes where id_coord='$coord'";
 											$link=mysql_connect($server,$dbuser,$dbpass);
 											$result=mysql_db_query($database,$query,$link);
 											while($row = mysql_fetch_array($result))
@@ -89,12 +90,12 @@
                                                 //if 1 Queretaro sino pachuca
 											echo " <tr>";
 											echo " <td>".$row['id_cliente']."</td>";
-											echo " <td>".utf8_encode($row['nombre']." ".$row['ap']." ".$row['am']." ")."</td>";
+											echo " <td>".$row['nombre']." ".$row['ap']." ".$row['am']."</td>";
 											echo " <td>".$row['edad']."</td>";
 											echo " <td>".$row['cel']."</td>";
 											echo " <td>".$row['email']."</td>";
                                             echo " <td>".$row['estado']."</td>";
-                                            echo " <td><a href=profile.php?idcliente=".$row['id_cliente'].">Ver Perfil</></td>";
+                                            echo " <td><a href=profile.php?coord=".$coord."&&idcliente=".$row['id_cliente'].">Ver Perfil</></td>";
 											echo " </tr>";
 											}
 											mysql_free_result($result);

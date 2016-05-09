@@ -8,7 +8,7 @@ if(($_POST['user']=="")||($_POST['password']=="")){
 	header("location:index.html?**faltan-datos**");
 }
 else{
-$query="SELECT * FROM admin WHERE user='$login' and pass ='$password' ";
+$query="SELECT * FROM coordinador WHERE user='$login' and pass ='$password' ";
 $link=mysql_connect($server,$dbuser,$dbpass);
 $result=mysql_db_query($database,$query,$link);
 	/////////////////////////////////////////////////////////////////////////////////////
@@ -20,14 +20,16 @@ $result=mysql_db_query($database,$query,$link);
 	else{ 
 	while($row = mysql_fetch_array($result))
 		{
+			$coord=$row['id_coord'];
 			$_SESSION['inicia']=$login;
-			header("location:eventos.php");
+			header("location:clientes.php?coord=$coord");
 			//header("location:profile.html");
 	}//while
 				
 	///////////////////////////////////////////////////////////////////////////////////////			
-	 		mysql_close($sql);
+	 		//mysql_close($sql);
 	 }
 }
+mysql_close($sql);
 ?>
 
